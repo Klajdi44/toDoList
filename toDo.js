@@ -87,3 +87,22 @@ function addLine(e) {
 
   }
 }
+//backgorund changer
+
+let color1 = document.getElementById("color1");
+let color2 = document.getElementById("color2");
+let body = document.querySelector("body");
+
+color1.addEventListener("input",
+  colorChanger);
+color2.addEventListener("input",
+  colorChanger);
+
+function colorChanger() {
+  body.style.background = "linear-gradient(to right," + color1.value + "," + color2.value, +")";
+
+  color1.style.background = color1.value;
+  color2.style.background = color2.value;
+
+
+}
